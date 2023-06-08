@@ -1,0 +1,47 @@
+body {
+  background-color: grey;
+}
+.text {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+.header {
+  background-color: blue;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+
+.reg {
+  color: black;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+
+
+}
+.gradiant {
+  background: linear-gradient(blue, transparent);
+  height: 40px;
+}
+.pic {
+  background-image: url("logo.png");
+}
+
+.b1 {
+  background-color:blue;
+  background-image: url(/one.jpg); background-repeat: no-repeat; background-size: cover;
+}
+
+input {
+  margin-bottom: 2%;
+}
+
+form {
+  margin-left: 10%;
+  margin-top: 10%;
+}

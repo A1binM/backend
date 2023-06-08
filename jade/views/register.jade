@@ -1,0 +1,52 @@
+extends layout
+
+doctype html 
+html 
+  head
+   link(href='/basic.css', rel='stylesheet' type='text/css')
+
+    
+  body.b1
+    block content
+
+
+      .header
+        div
+          h1.text Home
+        div
+          a(href='#')
+            h1 Catalog
+        div
+          img(src='/images/logo.png' alt='' height='100px' width='100px')
+        div
+          a(href='#')
+            h1 Contact
+        div
+          a(href='#')
+            h1 Order
+      .gradiant
+      div
+
+      form(action="/register", method="post")
+          input(type="text", placeholder="Enter Username", name="username", required)
+          input(type="text", placeholder="Enter Mail", name="mail", required)
+          input(id="password", type="password", placeholder="Enter Password", name="password", required)
+          input(id="confirm-password", type="password", placeholder="Enter Password", name="confirm-password", required)
+          button(type="submit") Register
+      p= errorMsg
+        
+      script.
+          var password = document.getElementById("password")
+          var confirm_password = document.getElementById("confirm-password");
+          var mail = document.getElementById("mail")
+
+          function validatePassword(){
+              if(password.value != confirm_password.value) {
+                  confirm_password.setCustomValidity("Passwords Don't Match");
+              } else {
+                  confirm_password.setCustomValidity('');
+              }
+          }
+
+          password.onchange = validatePassword;
+          confirm_password.onkeyup = validatePassword;

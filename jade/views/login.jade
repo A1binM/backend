@@ -1,0 +1,43 @@
+extends layout
+
+doctype html 
+html 
+  head
+   title = ('Login')
+   link(href='/stylesheets/style.css', rel='stylesheet' type='text/css')
+
+    
+  body.b1
+    block content
+
+
+      .header
+        div
+          h1.text Home
+        div
+          a(href='#')
+            h1 Catalog
+        div
+          img(src='/images/logo.png' alt='' height='100px' width='100px')
+        div
+          a(href='#')
+            h1 Contact
+        div
+          a(href='#')
+            h1 Order
+      .gradiant
+        div
+
+
+      form(action="/login", method="post")
+          input(type="text", placeholder="Enter mail", name="mail", required)
+          input(type="password", placeholder="Enter Password", name="password", required)
+          button(type="submit") Login
+          button   
+            a.reg(href="/register") Register
+          
+      p= errorMsg
+
+
+
+

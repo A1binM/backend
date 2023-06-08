@@ -1,0 +1,37 @@
+extends layout
+
+extends layout
+
+doctype html 
+html 
+  head
+    title Login
+    link(href='/basic.css', rel='stylesheet' type='text/css')
+
+    
+  body.b1
+    block content
+
+
+      .header
+        div
+          h1.text Home
+        div
+          a(href='#')
+            h1 Catalog
+        div
+          img(src='/images/logo.png' alt='' height='100px' width='100px')
+        div
+          a(href='#')
+            h1 Contact
+        div
+          a(href='#')
+            h1 Order
+      .gradiant
+        div
+
+      h1= title
+      p Welcome #{title}
+  
+      a(href="/logout")
+        button Logout
